@@ -1,5 +1,305 @@
+:root {
+    --primary: #635BFF;
+    --secondary: #CCCAFA;
+    --white: #FFFFFF;
+    --black: #404040;
+}
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+body {
+    background: #ffffff;
+    background: linear-gradient(356deg,rgba(255, 255, 255, 1) 0%, var(--secondary), rgba(255, 255, 255, 1) 100%);
+}
+body > * {
+    padding: 20px;
+}
+
+/* FONTS */
+.fira-sans-condensed-black {
+    font-family: "Fira Sans Condensed", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    letter-spacing: 1px;
+}
+
+.fira-sans-condensed-bold {
+    font-family: "Fira Sans Condensed", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.fira-sans-condensed-regular {
+    font-family: "Fira Sans Condensed", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+.inter-bold {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.inter-semi-bold {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+}
+
+.inter-regular {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+/* REUSABLE CLASSES */
+.img-logo {
+    display: block;
+    width: 90px;
+    height: 90px;
+    background-color: var(--white);
+}
+
+.primary-text {
+    color: var(--primary);
+}
+
+.cta {
+    width: 100%;
+    font-size: 18px;
+    text-align: center;
+    padding-block: 17px;
+    border-radius: 31px;
+    border: none;
+    margin-block: 15px;
+}
+
+.fira-sans-condensed-bold.cta {
+    background-color: var(--primary);
+    color: var(--white);
+}
+
+.quote-container {
+    display: grid;
+    grid-template-columns: 10px 1fr;
+    gap: 10px;
+    margin-block: 15px;
+
+    .quote {
+        display: block;
+        background-color: var(--secondary);
+        height: 100%;
+    }
+}
+
+/* SPECIFIC SECTIONS */
+header {
+    span {
+        display: block;
+        font-size: 28px;
+        margin: 15px 0 30px 0;
+    }
+
+    h1 {
+        line-height: 50px;
+        letter-spacing: 4%;
+    }
+
+    p {
+        margin-block: 15px;
+    }
+    
+    color: var(--white);
+    border-radius: 0 0 20px 20px;
+    background: var(--primary);
+    background: linear-gradient(356deg,var(--secondary) 0%, var(--primary) 100%);
+}
+
+section.porque-ahora {
+    .porque-ahora-card {
+        span {
+            display: inline-block;
+            width: 100%;
+            height: 20px;
+            background-color: var(--secondary);
+            border-radius: 20px 20px 0 0;
+        }
+
+        div {
+            padding: 12px;
+        }
+
+        border-radius: 20px;
+        border: solid 1px var(--primary);
+    }
+}
+
+section.funciones {
+    .cta {
+        margin-block: 45px;
+    }
+
+    .primary-text {
+        font-size: 28px;
+    }
+
+    h2 {
+        font-size: 27px;
+        margin-bottom: 25px;
+    }
+
+    article {
+        display: block;
+        border-radius: 20px;
+        background-color: var(--white);
+        padding: 15px;
+        margin-bottom: 25px;
+
+        h3 {
+            font-size: 23px;
+            line-height: 27px;
+        }
+
+        p {
+            font-size: 18px;
+            margin-block: 10px;
+        }
+
+        img {
+            margin: 0 auto;
+        }
+    }
+}
+
+section.casos-uso {
+    border-radius: 20px;
+    background: var(--primary);
+    background: linear-gradient(90deg,var(--primary) 0%, var(--secondary) 100%);
+    color: var(--white);
+
+    .cta {
+        color: var(--primary);
+        margin-block: 30px;
+    }
+
+    hr {
+        border: solid 1px var(--white);
+        margin-block: 20px;
+    }
+
+    h2 {
+        font-size: 27px;
+        padding-bottom: 25px;
+    }
+
+    article {
+        li, p {
+            margin-bottom: 10px;
+        }
+        ul {
+            padding-left: 10px;
+        }
+    }
+}
+
+section.porque-ahora {
+    article {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 25px;
+
+        h3 {
+            font-size: 23px;
+        }
+
+        p {
+            font-size: 18px;
+        }
+    }
+
+    span.fira-sans-condensed-black {
+        font-size: 28px;
+        margin-block: 20px;
+        display: block;
+    }
+
+    h1 {
+        font-size: 36px;
+        line-height: 50px;
+        letter-spacing: 4%;
+        margin-block: 15px;
+    }
+
+    h2, h3 {
+        font-size: 23px;
+    }
+
+    & > p {
+        font-size: 18px;
+        margin-block: 25px;
+    }
+
+    .cta {
+        background: var(--primary);
+        color: var(--white);
+        margin-block: 25px;
+    }
+}
+
+section.registro {
+    span {
+        font-size: 28px;
+        margin-block: 10px;
+    }
+
+    h2 {
+        font-size: 23px;
+        margin-block: 10px;
+    }
+
+    p {
+        font-size: 18px;
+    }
+
+    form {
+        margin-block: 30px;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        border-radius: 20px;
+        background-color: var(--primary);
+
+        input, textarea {
+            display: block;
+            margin-bottom: 20px;
+            padding: 10px;
+            border: none;
+            border-radius: 10px;
+            font-size: 12px;
+        }
+
+        input[type=submit] {
+            width: 120px;
+            background: var(--secondary);
+            font-size: 12px;
+            font-weight: 700;
+            color: var(--primary);
+        }
+    }
+
+    background: var(--secondary);
+    background: linear-gradient(325deg, rgba(255, 255, 255, 1) 0%, var(--secondary) 100%);
+}
+
+footer {
+    text-align: center;
+    margin: 30px;
 }
