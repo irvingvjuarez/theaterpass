@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Theater Pass</title>
     <link rel="stylesheet" href="./styles.css">
-    <link rel="icon" type="image/x-icon" href="../static/Icon.ico">   
+    <link rel="icon" type="image/x-icon" href="../static/Icon.png">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,54 +26,76 @@
         </div>
     </header>
 
-    <main>
-        <section class="funciones">
+    <section class="funciones">
+        <div class="container-block">
             <h2 class="inter-semi-bold">
                 ¿Que puedes hacer con <span class="fira-sans-condensed-black">TheaterPass</span>?
             </h2>
-            <article>
-                <h3 class="inter-bold">Crea funciones y boletos en minutos</h3>
-                <p class="fira-sans-condensed-regular">Organiza fechas, horarios y capacidad de cada función de forma rápida e intuitiva.</p>
-                <p class="fira-sans-condensed-regular">Fácil de usar, incluso si no tienes experiencia técnica.</p>
-                <img class="img-logo" src="../static/ticket.png" alt="Ticket">
-            </article>
 
-            <article>
-                <h3 class="inter-bold">Reservas para elenco y staff</h3>
-                <p class="fira-sans-condensed-regular">Permite que actores y producción reserven boletos sin confusión ni duplicados.</p>
-                <p class="fira-sans-condensed-regular">Sistema claro y controlado para asignaciones internas.</p>
-                <img class="img-logo" src="../static/calendar.png" alt="Calendar">
-            </article>
-
-            <article>
-                <h3 class="inter-bold">Pagos en línea y boletos digitales</h3>
-                <p class="fira-sans-condensed-regular">Cobra entradas con tarjeta y envía boletos con código QR automáticamente.</p>
-                <p class="fira-sans-condensed-regular">Sin apps, sin complicaciones para tus espectadores.</p>
-                <img class="img-logo" src="../static/online-payment.png" alt="Online Payment">
-            </article>
-
-            <article>
-                <h3 class="inter-bold">Panel de ventas en tiempo real</h3>
-                <p class="fira-sans-condensed-regular">Consulta cuántos boletos se han vendido por función y descarga listas de asistentes.</p>
-                <p class="fira-sans-condensed-regular">Todo el seguimiento que necesitas, en un solo lugar.</p>
-                <img class="img-logo" src="../static/chart.png" alt="Chart">
-            </article>
-
-            <article>
-                <h3 class="inter-bold">Una página para cada obra</h3>
-                <p class="fira-sans-condensed-regular">Comparte fácilmente el enlace para vender boletos desde celular o computadora.</p>
-                <p class="fira-sans-condensed-regular">Tu obra en línea, lista para vender entradas desde hoy.</p>
-                <img class="img-logo" src="../static/money-exchange.png" alt="Money Exchange">
-            </article>
-
+            <div class="cards-container">
+                <article>
+                    <h3 class="inter-bold">Crea funciones y boletos en minutos</h3>
+                    <div class="content">
+                        <div class="content-text">
+                            <p class="fira-sans-condensed-regular">Organiza fechas, horarios y capacidad de cada función de forma rápida e intuitiva.</p>
+                            <p class="fira-sans-condensed-regular">Fácil de usar, incluso si no tienes experiencia técnica.</p>
+                        </div>
+                        <img class="img-logo" src="../static/ticket.png" alt="Ticket">
+                    </div>
+                </article>
+        
+                <article>
+                    <h3 class="inter-bold">Reservas para elenco y staff</h3>
+                    <div class="content">
+                        <div class="content-text">
+                            <p class="fira-sans-condensed-regular">Permite que actores y producción reserven boletos sin confusión ni duplicados.</p>
+                            <p class="fira-sans-condensed-regular">Sistema claro y controlado para asignaciones internas.</p>
+                        </div>
+                        <img class="img-logo" src="../static/calendar.png" alt="Calendar">
+                    </div>
+                </article>
+        
+                <article>
+                    <h3 class="inter-bold">Pagos en línea y boletos digitales</h3>
+                    <div class="content">
+                        <div class="content-text">
+                            <p class="fira-sans-condensed-regular">Cobra entradas con tarjeta y envía boletos con código QR automáticamente.</p>
+                            <p class="fira-sans-condensed-regular">Sin apps, sin complicaciones para tus espectadores.</p>
+                        </div>
+                        <img class="img-logo" src="../static/online-payment.png" alt="Online Payment">
+                    </div>
+                </article>
+        
+                <article>
+                    <h3 class="inter-bold">Panel de ventas en tiempo real</h3>
+                    <div class="content">
+                        <div class="content-text">
+                            <p class="fira-sans-condensed-regular">Consulta cuántos boletos se han vendido por función y descarga listas de asistentes.</p>
+                            <p class="fira-sans-condensed-regular">Todo el seguimiento que necesitas, en un solo lugar.</p>
+                        </div>
+                        <img class="img-logo" src="../static/chart.png" alt="Chart">
+                    </div>
+                </article>
+        
+                <article>
+                    <h3 class="inter-bold">Una página para cada obra</h3>
+                    <div class="content">
+                        <div class="content-text">
+                            <p class="fira-sans-condensed-regular">Comparte fácilmente el enlace para vender boletos desde celular o computadora.</p>
+                            <p class="fira-sans-condensed-regular">Tu obra en línea, lista para vender entradas desde hoy.</p>
+                        </div>
+                        <img class="img-logo" src="../static/money-exchange.png" alt="Money Exchange">
+                    </div>
+                </article>
+            </div>
+    
             <span class="fira-sans-condensed-black primary-text">
                 ¿Quieres ser uno de los primeros en usarla? ¡Únete a la lista de espera!
             </span>
-
+    
             <button class="fira-sans-condensed-bold cta">Unirme a lista de espera</button>
-        </section>
-        
-    </main>
+        </div>
+    </section>
 
     <section class="casos-uso">
         <h2 class="inter-semi-bold">
@@ -187,13 +209,9 @@
             <span></span>
             <div>
                 <h3 class="inter-bold">Reservas confusas</h3>
-                <br>
                 <p class="fira-sans-condensed-regular">Actores que piden boletos por mensaje…</p>
-                <br>
                 <p class="fira-sans-condensed-regular">Familiares que “te apartaron 2 lugares” pero no pagaron…</p>
-                <br>
                 <p class="fira-sans-condensed-regular">Y nadie sabe cuántos asientos quedan realmente.</p>
-                <br>
                 <p class="fira-sans-condensed-regular">“A veces reservaban boletos y ni llegaban. No sabíamos si podíamos venderlos o no.”</p>
             </div>
         </article>
@@ -202,9 +220,7 @@
             <span></span>
             <div>
                 <h3 class="inter-bold">Cobros desordenados</h3>
-                <br>
                 <p class="fira-sans-condensed-regular">Transferencias por WhatsApp, capturas de pantalla, pagos que nunca llegaron, y dinero que se mezcla con el de otras cosas.</p>
-                <br>
                 <p class="fira-sans-condensed-regular">“Teníamos que revisar el estado de cuenta para ver quién sí pagó. Perdíamos tiempo y dinero.”</p>
             </div>
         </article>
@@ -213,13 +229,9 @@
             <span></span>
             <div>
                 <h3 class="inter-bold">Listas manuales</h3>
-                <br>
                 <p class="fira-sans-condensed-regular">Nombres anotados en libretas o hojas de Excel mal sincronizadas.</p>
-                <br>
                 <p class="fira-sans-condensed-regular">Cambios de último momento que se pierden.</p>
-                <br>
                 <p class="fira-sans-condensed-regular">Y el día de la función, nadie sabe quién sí va y quién no.</p>
-                <br>
                 <p class="fira-sans-condensed-regular">“Había funciones con gente de pie y otras medio vacías… porque no llevábamos control.”</p>
             </div>
         </article>
@@ -228,11 +240,8 @@
             <span></span>
             <div>
                 <h3 class="inter-bold">Mala experiencia para el público</h3>
-                <br>
                 <p class="fira-sans-condensed-regular">El espectador tiene que escribir, esperar respuesta, pagar aparte, mandar comprobante…</p>
-                <br>
                 <p class="fira-sans-condensed-regular">Todo eso para poder asistir a una obra.</p>
-                <br>
                 <p class="fira-sans-condensed-regular">“Varias personas querían ir, pero se les complicó tanto que ya no compraron.”</p>
             </div>
         </article>
