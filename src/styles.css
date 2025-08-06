@@ -12,6 +12,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+html {
+    scroll-behavior: smooth;
+}
 body {
     background: #ffffff;
     background: linear-gradient(356deg,rgba(255, 255, 255, 1) 0%, var(--secondary), rgba(255, 255, 255, 1) 100%);
@@ -77,12 +80,16 @@ body > * {
 
 .cta {
     width: 100%;
+    max-width: 600px;
     font-size: 1.125rem;
     text-align: center;
     padding-block: 17px;
     border-radius: 31px;
     border: none;
-    margin-block: 15px;
+    margin: 15px auto;
+    display: block;
+    cursor: pointer;
+    text-decoration: none;
 }
 
 .fira-sans-condensed-bold.cta {
@@ -135,13 +142,30 @@ h2 {
     }
 }
 
-p {
+h3, strong {
+    font-size: 1.2rem;
+
+    @media screen and (min-width: 500px) {
+        font-size: 1.5rem;
+    }
+}
+
+p, li {
     margin-block: 0.5rem;
     font-size: 1rem;
 
     @media screen and (min-width: 500px) {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
         margin-block: 1.5rem;
+    }
+}
+
+hr {
+    border: solid 1px var(--white);
+    margin-block: 20px;
+
+    @media screen and (min-width: 500px) {
+        margin-block: 30px;
     }
 }
 
@@ -157,6 +181,7 @@ header {
     }
 
     @media screen and (min-width: 426px) {
+        padding-block: 50px;
         position: relative;
         overflow-x: hidden;
         
@@ -173,11 +198,15 @@ header {
             margin: auto;
         }
     }
+}
+
+.cards-container {
+    display: grid;
+    gap: 25px;
+    margin-bottom: 25px;
 
     @media screen and (min-width: 768px) {
-        h1 {
-            width: 70%;
-        }
+        grid-template-columns: 1fr 1fr;
     }
 }
 
@@ -191,10 +220,6 @@ section.funciones {
     }
 
     .cards-container {
-        display: grid;
-        gap: 25px;
-        margin-bottom: 25px;
-        
         article {
             display: block;
             border-radius: 20px;
@@ -226,17 +251,59 @@ section.funciones {
             }       
         }
     }
+}
 
-    
-    @media screen and (min-width: 768px) {
-        .cards-container {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
+section.casos-uso {
+    border-radius: 35px;
+    background: var(--primary);
+    background: linear-gradient(90deg,var(--primary) 0%, var(--secondary) 100%);
+    color: var(--white);
+
+    .cta {
+        background-color: var(--white);
+        color: var(--primary);
+        margin-block: 30px;
+    }
+
+    h2 {
+        font-size: 27px;
+    }
+
+    article {
+        li, p {
+            margin-bottom: 10px;
+        }
+        ul {
+            padding-left: 10px;
         }
     }
 }
 
 section.porque-ahora {
+    position: relative;
+    overflow-x: hidden;
+    img {
+        display: none;
+    }
+
+    .title-container {
+        padding-bottom: 30px;
+    }
+
+    @media screen and (min-width: 426px) {
+        .title-container {
+            display: grid;
+            grid-template-columns: 60% 40%;
+            align-items: center;
+        }
+
+        img {
+            display: block;
+            width: 90%;
+            margin: auto;
+        }
+    }
+
     .porque-ahora-card {
         span {
             display: inline-block;
@@ -253,44 +320,10 @@ section.porque-ahora {
         border-radius: 20px;
         border: solid 1px var(--primary);
     }
-}
 
-section.casos-uso {
-    border-radius: 20px;
-    background: var(--primary);
-    background: linear-gradient(90deg,var(--primary) 0%, var(--secondary) 100%);
-    color: var(--white);
-
-    .cta {
-        color: var(--primary);
-        margin-block: 30px;
-    }
-
-    hr {
-        border: solid 1px var(--white);
-        margin-block: 20px;
-    }
-
-    h2 {
-        font-size: 27px;
-        padding-bottom: 25px;
-    }
-
-    article {
-        li, p {
-            margin-bottom: 10px;
-        }
-        ul {
-            padding-left: 10px;
-        }
-    }
-}
-
-section.porque-ahora {
     article {
         display: flex;
         flex-direction: column;
-        margin-bottom: 25px;
 
         h3 {
             font-size: 23px;
@@ -305,13 +338,6 @@ section.porque-ahora {
         font-size: 28px;
         margin-block: 20px;
         display: block;
-    }
-
-    h1 {
-        font-size: 36px;
-        line-height: 50px;
-        letter-spacing: 4%;
-        margin-block: 15px;
     }
 
     h2, h3 {
@@ -331,6 +357,14 @@ section.porque-ahora {
 }
 
 section.registro {
+    @media screen and (min-width: 500px) {
+        .content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px
+        }
+    }
+
     span {
         font-size: 28px;
         margin-block: 10px;
