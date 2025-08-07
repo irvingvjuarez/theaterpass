@@ -373,6 +373,7 @@ section.registro {
     h2 {
         font-size: 23px;
         margin-block: 10px;
+        display: block;
     }
 
     p {
@@ -396,12 +397,25 @@ section.registro {
             font-size: 12px;
         }
 
-        input[type=submit] {
+        button[type=submit] {
+            border: none;
+            border-radius: 20px;
             width: 120px;
             background: var(--secondary);
-            font-size: 12px;
-            font-weight: 700;
             color: var(--primary);
+            font-style: normal;
+            letter-spacing: 1px;
+            font-family: "Fira Sans Condensed", sans-serif;
+
+            span {
+                font-size: 1.2rem;
+                font-weight: 600;
+                display: inline;
+            }
+        }
+
+        p {
+            color: var(--white);
         }
     }
 

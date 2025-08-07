@@ -4,12 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TheaterPass</title>
+    <meta name="description" content="La plataforma que simplifica la gestión de boletos y pagos para producciones teatrales independientes">
     <link rel="stylesheet" href="./styles.css">
     <link rel="icon" type="image/x-icon" href="/Icon.png">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:wght@400;700;900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+    <!-- Open Graph (Facebook, LinkedIn, WhatsApp) -->
+    <meta property="og:title" content="TheaterPass">
+    <meta property="og:description" content="La plataforma que simplifica la gestión de boletos y pagos para producciones teatrales independientes">
+    <meta property="og:image" content="/preview.png">
+    <meta property="og:image:alt" content="TheaterPass vista previa">
+    <meta property="og:url" content="http://localhost:5173">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="TheaterPass">
+    
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="TheaterPass">
+    <meta name="twitter:description" content="La plataforma que simplifica la gestión de boletos y pagos para producciones teatrales independientes">
+    <meta name="twitter:image" content="/preview.png">
+    <meta name="twitter:image:alt" content="TheaterPass vista previa">
+    
+    <!-- Additional Meta Tags -->
+    <link rel="icon" type="image/x-icon" href="/Icon.ico">
+    <link rel="canonical" href="http://localhost:5173">
 </head>
 <body>
     <header>
@@ -295,12 +316,16 @@
                     <p class="fira-sans-condensed-regular">Si organizas funciones, formas parte de una producción o tienes un espacio escénico, cuéntanos un poco sobre ti.</p>
                 </div>
 
-                <form>
-                    <input type="text" placeholder="Nombre">
-                    <input type="email" placeholder="Email">
-                    <textarea rows="10" name="" id="" placeholder="Comentario..."></textarea>
-                    <input type="submit">
+                <form id="contactForm">
+                    <input type="text" placeholder="Nombre" required id="name">
+                    <input type="email" placeholder="Correo electronico" required id="email">
+                    <textarea rows="10" name="" id="comment" placeholder="Comentario (Opcional)"></textarea>
+                    <button type="submit" id="submitBtn">
+                        <span id="submitText">Enviar</span>
+                    </button>
+                    <p class="inter-bold" id="message" class="message"></p>
                 </form>
+
             </div>
     
         </div>
@@ -310,5 +335,7 @@
         Todos los derechos reservados 
         © 2025 <span class="fira-sans-condensed-black">TheaterPass</span>
     </footer>
+
+    <script src="/main.js"></script>
 </body>
 </html>
