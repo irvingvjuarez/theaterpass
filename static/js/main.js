@@ -1,8 +1,19 @@
 // REPLACE THIS URL WITH YOUR ACTUAL FUNCTION URL
 const AZURE_FUNCTION_URL = 'https://register-function-fgatb5gndmhtftgu.eastus-01.azurewebsites.net/api/submitForm?';
 
-const form = document.getElementById('contactForm');
+// Pre-warm function when page loads
+window.addEventListener('load', () => {
+    // Send a lightweight request to wake up the function
+    fetch(AZURE_FUNCTION_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ warmup: true })
+    })
+    .then(() => console.log("Azure function warn-up done"))
+    .catch(() => {})
+});
 
+const form = document.getElementById('contactForm');
 form.addEventListener('submit', async function(e) {
     e.preventDefault();
     
