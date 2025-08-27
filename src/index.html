@@ -41,7 +41,7 @@
                     La plataforma que simplifica la gestión de boletos y pagos para producciones teatrales independientes
                 </h1>
                 <p class="inter-regular">Porque hacer teatro es difícil. Vender boletos no debería serlo.</p>
-                <a href="#registro" class="fira-sans-condensed-bold cta">Unirme a lista de espera</a>
+                <a href="#registro" class="fira-sans-condensed-bold cta">Empieza ahora</a>
             </div>
             <img src="/mobile-phone.png" alt="mobile phone">
         </div>
@@ -114,7 +114,7 @@
                 ¿Quieres ser uno de los primeros en usarla? ¡Únete a la lista de espera!
             </span>
     
-            <a href="#registro" class="fira-sans-condensed-bold cta">Unirme a lista de espera</a>
+            <a href="#registro" class="fira-sans-condensed-bold cta">Empieza ahora</a>
         </div>
     </section>
 
@@ -216,7 +216,7 @@
             </article>
         </div>
 
-        <a href="#registro" class="fira-sans-condensed-bold cta">Unirme a lista de espera</a>
+        <a href="#registro" class="fira-sans-condensed-bold cta">Empieza ahora</a>
     </section>
 
     <section class="porque-ahora">
@@ -303,28 +303,72 @@
             <h2 class="inter-bold">Es hora de tener una solución sencilla, accesible y hecha a tu medida</h2>
         </div>
         
-        <a href="#registro" class="fira-sans-condensed-bold cta">Unirme a lista de espera</a>
+        <a href="#registro" class="fira-sans-condensed-bold cta">Empieza ahora</a>
     </section>
 
     <section class="registro" id="registro">
         <div class="container-block">
-            <span class="fira-sans-condensed-black">Registrate ahora</span>
-    
             <div class="content">
                 <div class="content-text">
+                    <span class="fira-sans-condensed-black">Registrate ahora</span>
                     <h2 class="inter-bold">Queremos conocerte.</h2>
                     <p class="fira-sans-condensed-regular">Si organizas funciones, formas parte de una producción o tienes un espacio escénico, cuéntanos un poco sobre ti.</p>
                 </div>
 
-                <form id="contactForm">
-                    <input type="text" placeholder="Nombre" required id="name">
-                    <input type="email" placeholder="Correo electronico" required id="email">
-                    <textarea rows="10" name="" id="comment" placeholder="Comentario (Opcional)"></textarea>
-                    <button type="submit" id="submitBtn">
-                        <span id="submitText">Enviar</span>
+                <div class="content-cta">
+                    <button class="google-login fira-sans-condensed-regular">
+                        <img src="/google-logo-30.png" alt="google logo">
+                        Registrate con Google
                     </button>
-                    <p class="inter-bold" id="message" class="message"></p>
-                </form>
+
+                    <div class="registro-separador">
+                        <hr>
+                        <span class="fira-sans-condensed-regular">Ó</span>
+                        <hr>
+                    </div>
+
+                    <form id="register" class="register-form">
+                        <div class="register-input fira-sans-condensed-regular">
+                            <label for="full-name">Nombre completo</label>
+                            <input type="text" id="full-name">
+                        </div>
+
+                        <div class="register-input fira-sans-condensed-regular">
+                            <label for="email">Correo electronico</label>
+                            <input type="email" id="email">
+                        </div>
+
+                        <div class="register-input fira-sans-condensed-regular">
+                            <label for="password">Contraseña</label>
+                            <input type="password" id="password">
+                        </div>
+
+                        <div class="register-input fira-sans-condensed-regular">
+                            <label for="password-confirmation">Confirma contraseña</label>
+                            <input type="password" id="password-confirmation">
+                        </div>
+
+                        <input class="register-submit fira-sans-condensed-bold cta" type="submit" value="Registrate">
+
+                        <p class="register-login-msg fira-sans-condensed-regular">
+                            ¿Ya tienes cuenta? Inicia sesión
+                            <span>
+                                <a href="">
+                                    aquí
+                                </a>
+                            </span>
+                        </p>
+                    </form>
+                    <!-- <form id="contactForm">
+                        <input type="text" placeholder="Nombre" required id="name">
+                        <input type="email" placeholder="Correo electronico" required id="email">
+                        <textarea rows="10" name="" id="comment" placeholder="Comentario (Opcional)"></textarea>
+                        <button type="submit" id="submitBtn">
+                            <span id="submitText">Enviar</span>
+                        </button>
+                        <p class="inter-bold" id="message" class="message"></p>
+                    </form> -->
+                </div>
 
             </div>
     

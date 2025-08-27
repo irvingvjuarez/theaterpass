@@ -365,9 +365,61 @@ section.registro {
         }
     }
 
-    span {
-        font-size: 28px;
-        margin-block: 10px;
+    .google-login {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        font-size: 18px;
+        padding: 10px;
+        background: transparent;
+        border: 2px solid var(--primary);
+
+        img {
+            width: 21px;
+            margin: 0 5px;
+        }
+    }
+
+    .registro-separador {
+        display: flex;
+        align-items: center;
+        text-align: center;
+        margin: 10px 0;
+
+        hr {
+            border: 1px solid var(--black);
+            flex: 1;
+        }
+
+        span {
+            padding: 0 10px;
+            font-size: 1rem;
+        }
+    }
+
+    .register-form {
+        .register-input {
+            display: flex;
+            flex-direction: column;
+            padding-block: 5px;
+            font-size: 18px;
+
+            label {
+                margin-bottom: 5px;
+            }
+
+            input {
+                border: 2px solid var(--primary);
+                padding: 5px;
+                background: none;
+                outline: none;
+            }
+        }
+    }
+
+    .content-text {
+        margin-bottom: 20px;
     }
 
     h2 {
@@ -380,8 +432,7 @@ section.registro {
         font-size: 18px;
     }
 
-    form {
-        margin-block: 30px;
+    /* form {
         padding: 20px;
         display: flex;
         flex-direction: column;
@@ -417,7 +468,7 @@ section.registro {
         p {
             color: var(--white);
         }
-    }
+    } */
 
     background: var(--secondary);
     background: linear-gradient(325deg, rgba(255, 255, 255, 1) 0%, var(--secondary) 100%);
