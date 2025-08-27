@@ -28,14 +28,14 @@ exports.handler = async (event, context) => {
     
         const authUrl = oauth2Client.generateAuthUrl({
             access_type: 'offline',
-            scopes,
+            scope: 'openid email profile',
             state: 'login'
         });
 
         return {
             statusCode: 200,
             headers,
-            body: JSON.stringify({ authUrl });
+            body: JSON.stringify({ authUrl })
         }
     } catch (error) {
         return {

@@ -374,6 +374,7 @@ section.registro {
         padding: 10px;
         background: transparent;
         border: 2px solid var(--primary);
+        cursor: pointer;
 
         img {
             width: 21px;
