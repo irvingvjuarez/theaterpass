@@ -411,10 +411,38 @@ section.registro {
             }
 
             input {
-                border: 2px solid var(--primary);
-                padding: 5px;
+                border: none;
                 background: none;
                 outline: none;
+                padding: 5px;
+                letter-spacing: 1.5px;
+            }
+
+            .register-input-field {
+                border: 2px solid var(--primary);
+            }
+
+            small {
+                padding-block: 5px;
+            }
+        }
+
+        .register-input-password {
+            display: grid;
+            grid-template-columns: 1fr 25px;
+            gap: 5px;
+            border: 2px solid var(--primary);
+
+            button {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border: none;
+                cursor: pointer;
+            }
+
+            img {
+                width: 25px;
             }
         }
     }

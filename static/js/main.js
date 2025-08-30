@@ -1,6 +1,3 @@
-// REPLACE THIS URL WITH YOUR ACTUAL FUNCTION URL
-const AZURE_FUNCTION_URL = 'https://register-function-fgatb5gndmhtftgu.eastus-01.azurewebsites.net/api/submitForm?';
-
 // Pre-warm function when page loads
 window.addEventListener('load', () => {
     if (window.location.protocol === "https:") {
@@ -39,6 +36,24 @@ loginGoogleBtn.addEventListener("click", async (e) => {
 });
 
 const form = document.getElementById('contactForm');
+
+// Show password logic
+document.querySelectorAll(".register-input-password").forEach(element => {
+    element.addEventListener("click", (e) => {
+        if (e.target.tagName === 'IMG') {
+            const childrenElements = [...element.children];
+            const inputElement = childrenElements.find(node => node.id === 'password' || 'password-confirmation');
+            if (inputElement.type === "password") {
+                inputElement.type = "text";
+                e.target.src = "/eye-off.svg";
+            } else {
+                inputElement.type = "password";
+                e.target.src = "/eye-show.svg";
+            }
+        }
+    })
+});
+
 // form.addEventListener('submit', async function(e) {
 //     e.preventDefault();
     
