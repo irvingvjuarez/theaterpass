@@ -54,6 +54,31 @@ document.querySelectorAll(".register-input-password").forEach(element => {
     })
 });
 
+const passwordInput = document.querySelector(".passwordInput");
+const confirmPassword = document.querySelector(".confirmPassword");
+
+passwordInput.addEventListener('input', () => {
+    const password = passwordInput.value;
+    const passwordError = document.getElementById('register-password-error');
+    
+    if (password.length > 0 && !/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d@$!%*?&]{8,}$/.test(password)) {
+        passwordError.textContent = 'La contraseña no cumple con los requisitos';
+    } else {
+        passwordError.textContent = '';
+    }
+});
+
+confirmPassword.addEventListener("input", (e) => {
+    const confirmPasswordInput = e.target.value;
+    const confirmError = document.getElementById("confirm-password-error");
+
+    if (confirmPasswordInput.length > 0 && passwordInput.value !== confirmPasswordInput) {
+        confirmError.textContent = "Las contraseñas no coinciden";
+    } else {
+        confirmError.textContent = '';
+    }
+});
+
 // form.addEventListener('submit', async function(e) {
 //     e.preventDefault();
     
